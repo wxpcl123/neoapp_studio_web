@@ -4,11 +4,13 @@ class SizeConfig {
   static MediaQueryData _mediaQueryData;
   static double devicePixelRatio;
   static double screenWidth;
+  static double screenHeight;
 
   void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     devicePixelRatio = _mediaQueryData.devicePixelRatio;
     screenWidth = _mediaQueryData.size.width;
+    screenHeight = _mediaQueryData.size.height;
   }
 }
 
@@ -85,42 +87,42 @@ class FeedBackItemList extends StatelessWidget {
       name: 'Jodge Doge',
       color: Colors.amber[50],
       description:
-      '    Neo先生有十多年的结构设计经验, 有丰富的产品设计思想, 为我们公司的产品提供了非常优秀的技术支撑, 完美实现了近10个产品的上市推广, 取得了长足的效益. 期待继续与Neo先生合作, 再续辉煌.',
+          '    Neo先生有十多年的结构设计经验, 有丰富的产品设计思想, 为我们公司的产品提供了非常优秀的技术支撑, 完美实现了近10个产品的上市推广, 取得了长足的效益. 期待继续与Neo先生合作, 再续辉煌.',
       headImg:
-      'https://neoapp.oss-cn-shanghai.aliyuncs.com/air_balloon_PNG19408.png',
+          'https://neoapp.oss-cn-shanghai.aliyuncs.com/air_balloon_PNG19408.png',
     ),
     FeedBack(
       name: 'Cindy Zhao',
       color: Colors.lightBlue[50],
       description:
-      '    Neo先生真是一个爱学习的人, 结构设计是他的专业, 软件编程是他的爱好, 这个爱好也在慢慢变成了他的专长. 用Flutter做的App可以完美运行于Android, IOS和Web端, 据说也快要能同时运行于MacOS和Windows端了, 真厉害.',
+          '    Neo先生真是一个爱学习的人, 结构设计是他的专业, 软件编程是他的爱好, 这个爱好也在慢慢变成了他的专长. 用Flutter做的App可以完美运行于Android, IOS和Web端, 据说也快要能同时运行于MacOS和Windows端了, 真厉害.',
       headImg:
-      'https://neoapp.oss-cn-shanghai.aliyuncs.com/supergirl_PNG30.png',
+          'https://neoapp.oss-cn-shanghai.aliyuncs.com/supergirl_PNG30.png',
     ),
     FeedBack(
       name: 'Doctor Zhu',
       color: Colors.lime[100],
       description:
-      '    我和Neo先生结识了3年, 当时我的公司刚起步, 找了Neo先生做顾问, 有了他的帮助, 迅速帮我搭建了结构团队, 并帮助建立了工作框架,  目前人员已经非常齐备了, 但我还是愿意继续找他协商一些较为麻烦的项目, 他经验真的很丰富.',
+          '    我和Neo先生结识了3年, 当时我的公司刚起步, 找了Neo先生做顾问, 有了他的帮助, 迅速帮我搭建了结构团队, 并帮助建立了工作框架,  目前人员已经非常齐备了, 但我还是愿意继续找他协商一些较为麻烦的项目, 他经验真的很丰富.',
       headImg: 'https://neoapp.oss-cn-shanghai.aliyuncs.com/ice_age_PNG10.png',
     ),
   ];
   @override
   Widget build(BuildContext context) {
     double width =
-    SizeConfig.screenWidth > getSize(1080) ? getSize(1080) : getSize(1024);
+        SizeConfig.screenWidth > getSize(1080) ? getSize(1080) : getSize(1024);
     double spacing = (width - getSize(330) * 3) / 2;
     return Container(
       decoration: BoxDecoration(
-        //border: Border.all(),
-      ),
+          //border: Border.all(),
+          ),
       child: Wrap(
         spacing: spacing,
         runSpacing: getSize(20),
         alignment: WrapAlignment.spaceBetween,
         children: List.generate(
           feedbacks.length,
-              (index) => FeedBackItem(
+          (index) => FeedBackItem(
             feedBack: feedbacks[index],
           ),
         ),
@@ -305,7 +307,7 @@ class WorksCardList extends StatelessWidget {
         runSpacing: getSize(30),
         children: List.generate(
           worksList.length,
-              (index) => WorksCard(
+          (index) => WorksCard(
             works: worksList[index],
           ),
         ),
@@ -437,7 +439,7 @@ class StartANewProject extends StatelessWidget {
       width: double.infinity,
       child: width < getSize(1024)
           ? SingleChildScrollView(
-          scrollDirection: Axis.horizontal, child: content(context))
+              scrollDirection: Axis.horizontal, child: content(context))
           : content(context),
     );
   }
@@ -576,34 +578,34 @@ class ServiceItemCardList extends StatelessWidget {
         serviceName: '软件开发',
         color: Colors.amber[200],
         serviceIcon:
-        'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_file_sync_ot38.png'),
+            'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_file_sync_ot38.png'),
     ServiceModel(
         serviceName: '工业设计',
         color: Colors.lightGreen[200],
         serviceIcon:
-        'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_lightbulb_moment_evxr.png'),
+            'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_lightbulb_moment_evxr.png'),
     ServiceModel(
         serviceName: '结构设计',
         color: Colors.orange[200],
         serviceIcon:
-        'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_drone_surveillance_kjjg.png'),
+            'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_drone_surveillance_kjjg.png'),
     ServiceModel(
         serviceName: '产业链服务',
         color: Colors.cyan[200],
         serviceIcon:
-        'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_factory_dy0a.png'),
+            'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_factory_dy0a.png'),
   ];
   @override
   Widget build(BuildContext context) {
     double width =
-    SizeConfig.screenWidth > getSize(1080) ? getSize(1080) : getSize(1024);
+        SizeConfig.screenWidth > getSize(1080) ? getSize(1080) : getSize(1024);
     double spacing = (width - getSize(240) * 4) / 3;
     return Wrap(
       spacing: spacing, //getSize(10),
       runSpacing: getSize(10),
       alignment: WrapAlignment.start,
       children: List.generate(serviceModels.length,
-              (index) => ServiceItemCard(serviceModel: serviceModels[index])),
+          (index) => ServiceItemCard(serviceModel: serviceModels[index])),
     );
   }
 }
@@ -690,8 +692,6 @@ class _ServiceItemCardState extends State<ServiceItemCard> {
     );
   }
 }
-
-
 
 class ServiceModel {
   ServiceModel({this.serviceName, this.color, this.serviceIcon});
