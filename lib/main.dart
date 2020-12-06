@@ -524,19 +524,7 @@ class StartANewProject extends StatelessWidget {
                 onTap: () {
                   showDialog(
                     context: context,
-                    builder: (context) => AlertDialog(
-                      title: Text('微信扫描下面的二维码:'),
-                      contentPadding: EdgeInsets.all(getSize(50)),
-                      content: Container(
-                        width: getSize(500),
-                        height: getSize(500),
-                        alignment: Alignment.center,
-                        child: Image.network(
-                          'https://neoapp.oss-cn-shanghai.aliyuncs.com/mywechat.png',
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                    ),
+                    builder: (context) => WeChatCard(),
                   );
                 },
               ),
@@ -843,25 +831,14 @@ class TopSectionContent extends StatelessWidget {
               Row(
                 children: [
                   IconButton(
-                      icon: Icon(Icons.qr_code, color: Colors.white),
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) => AlertDialog(
-                            title: Text('微信扫描下面的二维码:'),
-                            contentPadding: EdgeInsets.all(getSize(50)),
-                            content: Container(
-                              width: getSize(500),
-                              height: getSize(500),
-                              alignment: Alignment.center,
-                              child: Image.network(
-                                'https://neoapp.oss-cn-shanghai.aliyuncs.com/mywechat.png',
-                                fit: BoxFit.fill,
-                              ),
-                            ),
-                          ),
-                        );
-                      }),
+                    icon: Icon(Icons.qr_code, color: Colors.white),
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => WeChatCard(),
+                      );
+                    },
+                  ),
                 ],
               ),
             ],
@@ -1033,9 +1010,21 @@ class _HoveredButtonState extends State<HoveredButton>
 }
 
 ///
-class ContactMeCard extends StatelessWidget {
+class WeChatCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return AlertDialog(
+      title: Text('微信扫描下面的二维码:'),
+      contentPadding: EdgeInsets.all(getSize(50)),
+      content: Container(
+        width: getSize(500),
+        height: getSize(500),
+        alignment: Alignment.center,
+        child: Image.network(
+          'https://neoapp.oss-cn-shanghai.aliyuncs.com/mywechat.png',
+          fit: BoxFit.fill,
+        ),
+      ),
+    );
   }
 }
