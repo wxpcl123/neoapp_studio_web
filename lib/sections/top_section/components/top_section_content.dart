@@ -47,7 +47,7 @@ class TopSectionContent extends StatelessWidget {
             ),
             SizedBox(height: getSize(50)),
             Text(
-              'NeoApp\n设计工作室',
+              'Neo Peng',
               style: TextStyle(
                 fontSize: getSize(64),
                 fontWeight: FontWeight.bold,

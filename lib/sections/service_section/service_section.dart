@@ -12,12 +12,12 @@ class ServiceSection extends StatelessWidget {
       width: SizeConfig.screenWidth > getSize(1080)
           ? getSize(1080)
           : getSize(1024),
-      padding: EdgeInsets.only(top: getSize(80), bottom: getSize(50)),
+      padding: EdgeInsets.only(top: getSize(50), bottom: getSize(30)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionTitle(
-            title: '我们能帮到您',
+            title: '我能帮到您',
             subTitle: '专业, 全面, 从创意, 到落地',
             decoColor: Colors.red,
           ),

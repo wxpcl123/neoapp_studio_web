@@ -24,6 +24,7 @@ class RecentWorksSection extends StatelessWidget {
             : getSize(1024),
         padding: EdgeInsets.only(top: getSize(30), bottom: getSize(100)),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SectionTitle(
               title: '可以看看最近的作品',

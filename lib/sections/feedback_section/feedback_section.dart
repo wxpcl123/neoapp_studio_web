@@ -19,6 +19,7 @@ class FeedBackSection extends StatelessWidget {
       margin: EdgeInsets.only(top: getSize(50), bottom: getSize(50)),
       decoration: BoxDecoration(),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SectionTitle(
             title: '收到的好评',

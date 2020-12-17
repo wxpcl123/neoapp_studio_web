@@ -52,7 +52,10 @@ class _WorksCardState extends State<WorksCard> {
                     image: NetworkImage(widget.works.img),
                     fit: BoxFit.fitHeight,
                   ),
-                  borderRadius: BorderRadius.circular(getSize(20)),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(getSize(20)),
+                    bottomLeft: Radius.circular(getSize(20)),
+                  ),
                   boxShadow: [
                     if (!_onHover)
                       BoxShadow(

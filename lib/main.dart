@@ -1,8 +1,8 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import 'sections/about_section/about_section.dart';
+import 'sections/declaration.dart';
 import 'sections/feedback_section/feedback_section.dart';
 import 'sections/service_section/service_section.dart';
 import 'sections/start_new_section.dart';
@@ -11,6 +11,8 @@ import 'sections/works_section/recent_works_section.dart';
 import 'utils/size_config.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -37,16 +39,7 @@ class HomePage extends StatelessWidget {
             RecentWorksSection(),
             FeedBackSection(),
             AboutSection(),
-            Container(
-              width: 200,
-              height: 200,
-              padding: EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Colors.grey,
-              ),
-              child: Image.asset('assets/images/docker_13.png'),
-            ),
-            SizedBox(height: 1000),
+            Declaration(),
           ],
         ),
       ),

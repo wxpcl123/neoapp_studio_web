@@ -11,18 +11,18 @@ class ServiceItemCardList extends StatelessWidget {
         color: Colors.amber[200],
         serviceIcon:
             'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_file_sync_ot38.png'),
-    ServiceModel(
-        serviceName: '工业设计',
-        color: Colors.lightGreen[200],
-        serviceIcon:
-            'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_lightbulb_moment_evxr.png'),
+    // ServiceModel(
+    //     serviceName: '工业设计',
+    //     color: Colors.lightGreen[200],
+    //     serviceIcon:
+    //         'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_lightbulb_moment_evxr.png'),
     ServiceModel(
         serviceName: '结构设计',
         color: Colors.orange[200],
         serviceIcon:
             'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_drone_surveillance_kjjg.png'),
     ServiceModel(
-        serviceName: '产业链服务',
+        serviceName: '供业链服务',
         color: Colors.cyan[200],
         serviceIcon:
             'https://neoapp.oss-cn-shanghai.aliyuncs.com/undraw_factory_dy0a.png'),

@@ -28,8 +28,8 @@ class _ServiceItemCardState extends State<ServiceItemCard> {
       },
       child: AnimatedContainer(
         duration: duration,
-        width: getSize(240),
-        height: getSize(280),
+        width: getSize(330),
+        height: getSize(330),
         alignment: Alignment.center,
         margin: EdgeInsets.symmetric(vertical: getSize(25)),
         decoration: BoxDecoration(
@@ -45,7 +45,7 @@ class _ServiceItemCardState extends State<ServiceItemCard> {
           ],
         ),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             AnimatedContainer(
               duration: duration,
@@ -75,7 +75,7 @@ class _ServiceItemCardState extends State<ServiceItemCard> {
               style: TextStyle(
                 color: Colors.white,
                 letterSpacing: 1.5,
-                fontSize: getSize(20),
+                fontSize: getSize(32),
                 fontWeight: FontWeight.bold,
               ),
             ),
